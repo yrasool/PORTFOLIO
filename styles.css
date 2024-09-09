@@ -24,7 +24,7 @@ body {
 }
 
 .profile-photo {
-    width: 300px; /* Larger profile photo */
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -40,30 +40,6 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Section */
-/* Contact Section */
-#contact {
-    padding: 50px;
-    background-color: #222;
-    color: white;
-    text-align: center;
-    margin-bottom: 30px; /* Adds space below the Contact section */
-}
-
-.contact-logo {
-    width: 70px; /* Increased size from 50px */
-    margin: 0 15px;
-}
-
-#contact ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-
 /* Experience Section */
 #experience {
     padding: 50px;
@@ -76,7 +52,7 @@ body {
 }
 
 .experience-logo {
-    width: 80px;
+    width: 80px; /* Logo size for USF and TKAI Lab logos */
     height: auto;
     margin: 10px;
 }
@@ -122,6 +98,27 @@ body {
     transform: translateY(-10px);
 }
 
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.contact-logo {
+    width: 50px; /* Original size for LinkedIn and GitHub logos */
+    margin: 0 15px;
+}
+
+#contact ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 /* Footer */
 footer {
     padding: 20px;
@@ -129,3 +126,4 @@ footer {
     color: white;
     text-align: center;
 }
+
