@@ -41,6 +41,7 @@ body {
 }
 
 /* Contact Section */
+/* Contact Section */
 #contact {
     padding: 50px;
     background-color: #222;
@@ -50,7 +51,7 @@ body {
 }
 
 .contact-logo {
-    width: 70px; /* Increased size slightly */
+    width: 70px; /* Increased size from 50px */
     margin: 0 15px;
 }
 
@@ -61,6 +62,7 @@ body {
     align-items: center;
     padding: 20px;
 }
+
 
 /* Experience Section */
 #experience {
