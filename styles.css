@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,43 +9,61 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 70vh; /* Reduced height to avoid it taking too much space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+/* About Me Section */
+#about-me {
+    padding: 50px;
+    background-color: white;
     text-align: center;
 }
 
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .profile-photo {
-    width: 200px; /* Adjusted size for the profile picture */
+    width: 200px;
     height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-top: 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.hero .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem; /* Slightly reduced font size */
+#about-me h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.hero p {
+#about-me p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Experience Section */
+#experience {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.experience-logo {
+    width: 80px;
+    height: auto;
+    margin: 10px;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+}
+
+.experience-item p {
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
 /* Projects Section */
@@ -52,12 +71,6 @@ body {
     padding: 50px;
     background-color: white;
     text-align: center;
-}
-
-.project-intro {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #333;
 }
 
 .project-grid {
@@ -77,59 +90,12 @@ body {
 }
 
 .project-image {
-    width: 100%; /* Full width of the card */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
     border-radius: 10px;
-    max-height: 200px; /* Limit height to keep a consistent size */
-    object-fit: cover; /* Ensure the image fits well inside the card */
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-}
-
-/* Experience Section */
-#experience {
-    padding: 50px;
-    background-color: #f7f7f7;
-    text-align: center;
-}
-
-.experience-item {
-    margin-bottom: 20px;
-}
-
-.experience-image {
-    width: 150px;
-    margin: 10px 0;
-}
-
-/* Education Section */
-#education {
-    padding: 50px;
-    background-color: white;
-    text-align: center;
-}
-
-.education-item img {
-    width: 150px;
-    margin-top: 10px;
-}
-
-/* Skills Section */
-#skills {
-    padding: 50px;
-    background-color: #f7f7f7;
-    text-align: center;
-}
-
-#skills ul {
-    list-style-type: none;
-}
-
-#skills ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
 }
 
 /* Contact Section */
@@ -159,20 +125,4 @@ footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
 }
