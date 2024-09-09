@@ -25,10 +25,10 @@ body {
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    width: 210px;
+    height: 210px;
+    border-radius: 60%;
+    margin-bottom: 25px;
 }
 
 #about-me h1 {
@@ -84,7 +84,7 @@ body {
 .project-card {
     background-color: #4CAF50;
     padding: 20px;
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     color: white;
     transition: transform 0.3s;
@@ -101,14 +101,14 @@ body {
 
 /* Contact Section */
 #contact {
-    padding: 50px;
+    padding: 60px;
     background-color: #222;
     color: white;
     text-align: center;
 }
 
 .contact-logo {
-    width: 50px;
+    width: 60px;
     margin: 0 15px;
 }
 
@@ -117,7 +117,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Footer */
