@@ -1,60 +1,149 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+/* Hero Section */
+.hero {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.profile-photo {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    border-radius: 50%; /* Makes the image round */
+    margin-top: 20px; /* Adds some space above the photo */
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    background-color: white;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
+.project-card {
+    background-color: #4CAF50;
     padding: 20px;
-    margin: 10px 0;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    transition: transform 0.3s;
 }
 
-#home {
-    background-color: #e2e2e2;
+.project-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Experience Section */
+#experience {
+    padding: 50px;
+    background-color: #f7f7f7;
     text-align: center;
-    padding: 50px 20px;
 }
 
-#about, #projects, #experience, #skills, #contact {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project, .job {
+.experience-item {
     margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+.experience-image {
+    width: 150px;
+    margin: 10px 0;
+}
+
+/* Education Section */
+#education {
+    padding: 50px;
+    background-color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+.education-item img {
+    width: 150px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#skills ul {
+    list-style-type: none;
+}
+
+#skills ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.contact-logo {
+    width: 50px;
+    margin: 0 15px;
+}
+
+#contact ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
 }
