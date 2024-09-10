@@ -67,6 +67,38 @@ body {
     margin-top: 10px;
 }
 
+/* Skills Section */
+#skills {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.skill-card img {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
 /* Projects Section */
 #projects {
     padding: 50px;
