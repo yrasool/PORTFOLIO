@@ -124,6 +124,31 @@ body {
     transition: transform 0.3s;
 }
 
+/* Unique background colors for each project card */
+.project-card-housing {
+    background-color: #1976D2; /* Deep blue */
+}
+
+.project-card-cnn {
+    background-color: #00796B; /* Teal */
+}
+
+.project-card-langchain {
+    background-color: #1A237E; /* Navy blue */
+}
+
+.project-card-databricks {
+    background-color: #455A64; /* Steel blue */
+}
+
+.project-card-byol {
+    background-color: #3F51B5; /* Medium blue */
+}
+
+.project-card-c {
+    background-color: #004D40; /* Dark teal */
+}
+
 .project-image {
     width: 100%;
     border-radius: 10px;
