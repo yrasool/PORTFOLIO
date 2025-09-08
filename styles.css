@@ -54,8 +54,10 @@ body {
 
 .experience-logo {
     width: 80px;
-    height: auto;
-    margin: 10px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .experience-item h3 {
@@ -159,3 +161,4 @@ footer {
     color: white;
     text-align: center;
 }
+
