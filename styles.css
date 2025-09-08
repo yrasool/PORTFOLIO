@@ -72,33 +72,79 @@ body {
 /* Skills Section */
 #skills {
     padding: 50px;
-    background-color: white;
+    background-color: #1a1a1a;
+    color: white;
     text-align: center;
 }
 
-.skills-grid {
+#skills h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.skills-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.skill-card {
+.skill-group-card {
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    padding: 30px;
+    width: 450px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.skill-group-card h3 {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-items {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
 }
 
-.skill-card img {
-    width: 60px; /* Adjust size as needed */
-    height: 60px; /* Adjust size as needed */
-    margin-bottom: 10px;
+.skill-item {
+    background-color: #404040;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
-.skill-card p {
-    font-size: 1.1rem;
-    color: #333;
+.skill-item:hover {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-group-card {
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
 /* Projects Section */
