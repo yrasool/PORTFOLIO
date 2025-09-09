@@ -123,6 +123,14 @@ body {
     color: white;
     transition: transform 0.3s;
 }
+.project-card-1 { background-color: #87CEEB; }   /* Light Blue */
+.project-card-2 { background-color: #20B2AA; }   /* Teal */
+.project-card-3 { background-color: #191970; }   /* Navy */
+.project-card-4 { background-color: #FF8C00; }   /* Orange */
+.project-card-5 { background-color: #9370DB; }   /* Purple */
+.project-card-6 { background-color: #FF7F50; }
+
+
 
 .project-image {
     width: 100%;
@@ -161,4 +169,5 @@ footer {
     color: white;
     text-align: center;
 }
+
 
