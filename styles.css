@@ -116,12 +116,36 @@ body {
 }
 
 .project-card {
-    background-color: #4CAF50;
     padding: 20px;
     width: 300px;
     border-radius: 10px;
     color: white;
     transition: transform 0.3s;
+}
+
+/* Individual project card colors */
+.project-card-1 {
+    background-color: #87CEEB; /* Light Blue */
+}
+
+.project-card-2 {
+    background-color: #20B2AA; /* Teal */
+}
+
+.project-card-3 {
+    background-color: #191970; /* Navy */
+}
+
+.project-card-4 {
+    background-color: #FF8C00; /* Orange */
+}
+
+.project-card-5 {
+    background-color: #9370DB; /* Purple */
+}
+
+.project-card-6 {
+    background-color: #FF7F50; /* Coral */
 }
 
 .project-image {
@@ -135,7 +159,7 @@ body {
 
 /* Contact Section */
 #contact {
-    padding: 6=50px;
+    padding: 50px;
     background-color: #222;
     color: white;
     text-align: center;
