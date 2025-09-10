@@ -41,32 +41,129 @@ body {
     line-height: 1.6;
 }
 
-/* Experience Section */
+/* Timeline Experience Section Styles */
 #experience {
-    padding: 50px;
+    padding: 50px 0;
     background-color: #f7f7f7;
-    text-align: center;
 }
 
-.experience-item {
-    margin-bottom: 30px;
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px;
 }
 
-.experience-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 10px auto;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #e0e0e0;
+    border-radius: 2px;
 }
 
-.experience-item h3 {
-    font-size: 1.5rem;
+.experience-card {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px 0 rgba(60,72,88,0.15), 0 1.5px 5px 0 rgba(60,72,88,0.08);
+    margin-bottom: 32px;
+    padding: 28px 30px 22px 70px;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.experience-item p {
-    font-size: 1.1rem;
-    margin-top: 10px;
+.experience-card:hover {
+    box-shadow: 0 12px 32px 0 rgba(60,72,88,0.20), 0 2px 10px 0 rgba(60,72,88,0.10);
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 32px;
+    width: 16px;
+    height: 16px;
+    background: #4CAF50;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #e0e0e0;
+}
+
+.exp-date {
+    position: absolute;
+    left: -180px;
+    top: 32px;
+    width: 160px;
+    text-align: right;
+    color: #888;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+    .timeline {
+        padding-left: 0;
+    }
+    .exp-date {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .experience-card {
+        padding: 28px 20px 22px 36px;
+    }
+}
+
+.exp-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 18px;
+}
+
+.exp-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #f2f2f2;
+    border: 2px solid #e0e0e0;
+    margin-right: 8px;
+}
+
+.exp-company {
+    font-size: 1.08rem;
+    color: #4CAF50;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.experience-card h3 {
+    margin: 0 0 2px 0;
+    font-size: 1.28rem;
+    font-weight: 700;
+    color: #24292f;
+}
+
+.exp-content ul {
+    padding-left: 18px;
+    margin: 0;
+}
+.exp-content ul li {
+    text-align: left;
+    font-size: 1.06rem;
+    color: #444;
+    margin-bottom: 7px;
+    line-height: 1.5;
+    list-style: disc;
 }
 
 /* Add these styles at the end of your styles.css file */
@@ -194,6 +291,7 @@ footer {
     color: white;
     text-align: center;
 }
+
 
 
 
