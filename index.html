@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <div class="page-shell">
@@ -29,7 +29,7 @@
                     <p class="eyebrow">B.S. Computer Science / University of South Florida / May 2026</p>
                     <h1>
                         Yusra Rasool
-                        <span>Software engineering, product systems, and intelligent infrastructure.</span>
+                        <span class="hero-balance" data-pretext>Software engineering, product systems, and intelligent infrastructure.</span>
                     </h1>
                     <div class="hero-tags" aria-label="Roles">
                         <span>Software Engineer</span>
@@ -152,7 +152,7 @@
             <section class="section experience-section" id="experience">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Experience</p>
-                    <h2>Software, systems, governance, and applied AI work under real constraints.</h2>
+                    <h2 data-pretext>Software, systems, governance, and applied AI work under real constraints.</h2>
                 </div>
 
                 <div class="timeline">
@@ -230,7 +230,7 @@
                 <div class="featured-grid">
                     <article class="feature-card feature-card-dark" data-reveal>
                         <div class="feature-label">Featured / Software Infrastructure</div>
-                        <h3>Siyaq</h3>
+                        <h3 data-pretext>Siyaq</h3>
                         <p>
                             A live web product built on Cloudflare Workers with RSS ingestion, source retrieval,
                             caching, and research-backed contextual layers. It is software infrastructure for
@@ -246,7 +246,7 @@
 
                     <article class="feature-card feature-card-accent" data-reveal>
                         <div class="feature-label">Featured / Utility Product</div>
-                        <h3>Ramadan Tracker</h3>
+                        <h3 data-pretext>Ramadan Tracker</h3>
                         <p>
                             A two-user product with cross-device syncing, offline persistence, and a more intentional
                             interface system. It is personal software, but built like a real product.
@@ -265,7 +265,7 @@
                         <img src="data.jpg" alt="Geospatial tourism model preview" class="project-image">
                         <div class="project-content">
                             <p class="project-type">Software + Data Product</p>
-                            <h3>Geospatial Tourism Model</h3>
+                            <h3 data-pretext>Geospatial Tourism Model</h3>
                             <p>Batch ingestion, secured API usage, scraping workflows, and spatial analysis combined into one pipeline for tourism demand modeling and destination planning.</p>
                             <a href="https://github.com/yrasool/-Caster-Breakout-Prediction" target="_blank" rel="noreferrer">View work</a>
                         </div>
@@ -274,7 +274,7 @@
                         <img src="AI AGENT.jpg" alt="LangChain AI agent preview" class="project-image">
                         <div class="project-content">
                             <p class="project-type">Developer Tooling</p>
-                            <h3>LangGraph Systems Inspector</h3>
+                            <h3 data-pretext>LangGraph Systems Inspector</h3>
                             <p>An agentic software tool for system analysis, diagnostics, workflow automation, and extensible orchestration around operational tasks.</p>
                             <a href="https://github.com/yrasool/LangChain-Agent" target="_blank" rel="noreferrer">View repo</a>
                         </div>

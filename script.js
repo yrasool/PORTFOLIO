@@ -1,8 +1,8 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!prefersReducedMotion) {
-    const revealItems = document.querySelectorAll("[data-reveal]");
+const revealItems = document.querySelectorAll("[data-reveal]");
 
+if (!prefersReducedMotion) {
     const revealObserver = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach((entry) => {
@@ -57,7 +57,81 @@ if (!prefersReducedMotion) {
         });
     }
 } else {
-    document.querySelectorAll("[data-reveal]").forEach((item) => {
+    revealItems.forEach((item) => {
         item.classList.add("is-visible");
     });
 }
+
+async function enhanceTypographyWithPretext() {
+    const targets = Array.from(document.querySelectorAll("[data-pretext]"));
+
+    if (targets.length === 0) {
+        return;
+    }
+
+    try {
+        const { prepareWithSegments, layoutWithLines } = await import("https://esm.sh/@chenglou/pretext");
+
+        await document.fonts.ready;
+
+        const renderTarget = (element) => {
+            const text = element.dataset.pretextSource || element.textContent.trim();
+
+            if (!text) {
+                return;
+            }
+
+            element.dataset.pretextSource = text;
+
+            const computed = getComputedStyle(element);
+            const width = Math.floor(element.clientWidth);
+            const font = `${computed.fontStyle} ${computed.fontWeight} ${computed.fontSize} ${computed.fontFamily}`;
+            const lineHeight = Number.parseFloat(computed.lineHeight);
+
+            if (!width || Number.isNaN(lineHeight)) {
+                return;
+            }
+
+            const prepared = prepareWithSegments(text, font);
+            const { lines } = layoutWithLines(prepared, width, lineHeight);
+
+            if (!lines || lines.length === 0) {
+                element.textContent = text;
+                return;
+            }
+
+            element.textContent = "";
+
+            const wrapper = document.createElement("span");
+            wrapper.className = "pretext-lines";
+
+            lines.forEach((line) => {
+                const lineNode = document.createElement("span");
+                lineNode.className = "pretext-line";
+                lineNode.textContent = line.text;
+                wrapper.appendChild(lineNode);
+            });
+
+            element.appendChild(wrapper);
+            element.classList.add("pretext-ready");
+        };
+
+        const rerenderAll = () => {
+            targets.forEach(renderTarget);
+        };
+
+        rerenderAll();
+
+        const resizeObserver = new ResizeObserver(() => {
+            rerenderAll();
+        });
+
+        targets.forEach((element) => {
+            resizeObserver.observe(element);
+        });
+    } catch (error) {
+        console.warn("Pretext enhancement unavailable", error);
+    }
+}
+
+enhanceTypographyWithPretext();

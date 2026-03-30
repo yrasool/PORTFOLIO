@@ -138,6 +138,10 @@ img {
     transform: translateX(20px);
 }
 
+.hero-balance {
+    display: block;
+}
+
 .hero-text,
 .section-heading p {
     max-width: 62ch;
@@ -565,6 +569,22 @@ img {
     display: inline-flex;
     margin-top: 18px;
     font-weight: 700;
+}
+
+[data-pretext] {
+    text-wrap: balance;
+}
+
+.pretext-ready {
+    visibility: visible;
+}
+
+.pretext-lines {
+    display: block;
+}
+
+.pretext-line {
+    display: block;
 }
 
 .blog-grid {
