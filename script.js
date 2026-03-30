@@ -108,6 +108,7 @@ async function enhanceTypographyWithPretext() {
             lines.forEach((line) => {
                 const lineNode = document.createElement("span");
                 lineNode.className = "pretext-line";
+                lineNode.style.setProperty("--line-index", wrapper.childElementCount);
                 lineNode.textContent = line.text;
                 wrapper.appendChild(lineNode);
             });
