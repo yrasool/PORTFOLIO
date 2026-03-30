@@ -591,7 +591,7 @@ img {
 
 .timeline {
     display: grid;
-    gap: 18px;
+    gap: 24px;
 }
 
 .experience-card {
@@ -599,6 +599,7 @@ img {
     grid-template-columns: 190px 1fr;
     gap: 22px;
     padding: 24px;
+    align-items: start;
 }
 
 .exp-date {
@@ -607,6 +608,8 @@ img {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    position: sticky;
+    top: 120px;
 }
 
 .exp-header {
@@ -772,6 +775,10 @@ img {
 
     .experience-card {
         gap: 12px;
+    }
+
+    .exp-date {
+        position: static;
     }
 
     .feature-card {
