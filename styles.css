@@ -104,7 +104,7 @@ img {
 
 .hero {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.22fr 0.78fr;
     gap: 40px;
     align-items: center;
     min-height: calc(100vh - 160px);
@@ -128,7 +128,7 @@ img {
 }
 
 .hero h1 {
-    max-width: 10ch;
+    max-width: none;
     font-size: clamp(3.9rem, 9vw, 7.6rem);
 }
 
@@ -140,6 +140,65 @@ img {
 
 .hero-balance {
     display: block;
+}
+
+.hero-nameplate {
+    margin-bottom: 24px;
+}
+
+.hero-board {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 18px;
+    align-items: start;
+}
+
+.hero-board-main,
+.hero-note {
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 30px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+.hero-board-main {
+    padding: 26px;
+    background:
+        radial-gradient(circle at top right, rgba(212, 163, 73, 0.12), transparent 26%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(247, 238, 223, 0.9) 100%);
+}
+
+.hero-board-kicker,
+.hero-note-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-manifesto {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.8rem, 2.8vw, 3rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+}
+
+.hero-board-side {
+    display: grid;
+    gap: 14px;
+}
+
+.hero-note {
+    padding: 18px;
+}
+
+.hero-note p:last-child {
+    color: var(--muted);
+    line-height: 1.55;
 }
 
 .hero-text,
@@ -693,6 +752,19 @@ img {
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
 }
 
+[data-pretext-style="manifesto"] .pretext-line {
+    margin-bottom: 0.18em;
+    padding: 0.12em 0.32em 0.14em 0.2em;
+    border-radius: 0 22px 22px 0;
+    border-left: 3px solid rgba(20, 20, 20, 0.12);
+    background:
+        linear-gradient(90deg, rgba(20, 20, 20, 0.11), rgba(219, 91, 49, 0.08) 60%, transparent 100%);
+}
+
+[data-pretext-style="manifesto"] .pretext-line[data-parity="odd"] {
+    margin-left: 0.9em;
+}
+
 [data-pretext-style="hero"] .pretext-line[data-parity="odd"] {
     margin-left: 0.58em;
 }
@@ -734,19 +806,6 @@ img {
     margin-left: 4px;
     margin-bottom: 0.25em;
     background: linear-gradient(90deg, rgba(219, 91, 49, 0.08), transparent 92%);
-}
-
-[data-pretext-style="manifesto"] .pretext-line {
-    margin-bottom: 0.16em;
-    padding: 0.1em 0.28em 0.12em 0.18em;
-    border-radius: 0 18px 18px 0;
-    border-left: 3px solid rgba(20, 20, 20, 0.12);
-    background:
-        linear-gradient(90deg, rgba(20, 20, 20, 0.1), rgba(219, 91, 49, 0.06) 62%, transparent 100%);
-}
-
-[data-pretext-style="manifesto"] .pretext-line[data-parity="odd"] {
-    margin-left: 0.7em;
 }
 
 .blog-grid {
@@ -930,6 +989,7 @@ img {
 
 @media (max-width: 980px) {
     .hero,
+    .hero-board,
     .featured-grid,
     .method-layout,
     .method-notes,
@@ -950,6 +1010,10 @@ img {
 
     .hero h1 span {
         transform: none;
+    }
+
+    .hero-nameplate {
+        margin-bottom: 18px;
     }
 
     .hero-visual {
@@ -1010,6 +1074,11 @@ img {
     .hero {
         gap: 24px;
         padding-top: 8px;
+    }
+
+    .hero-board-main,
+    .hero-note {
+        border-radius: 24px;
     }
 
     .hero-visual {
