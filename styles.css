@@ -593,18 +593,37 @@ img {
     opacity: 0;
     animation: pretext-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: calc(var(--line-index, 0) * 90ms + 70ms);
+    width: min(100%, var(--line-width, 100%));
 }
 
-.hero-balance .pretext-line,
-.section-heading [data-pretext] .pretext-line,
+.hero-balance.pretext-ready .pretext-line {
+    margin-bottom: 0.12em;
+    padding: 0.06em 0.22em 0.12em 0;
+    border-bottom: 1px solid rgba(63, 83, 53, 0.22);
+    background: linear-gradient(90deg, rgba(63, 83, 53, 0.08), transparent 86%);
+}
+
+.hero-balance.pretext-ready .pretext-line[data-parity="odd"] {
+    margin-left: 0.42em;
+}
+
 .section-heading h2.pretext-ready .pretext-line {
+    margin-bottom: 0.1em;
+    padding: 0.02em 0.16em 0.08em 0;
     border-bottom: 1px solid rgba(20, 20, 20, 0.08);
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.06), transparent 88%);
+}
+
+.section-heading h2.pretext-ready .pretext-line[data-parity="odd"] {
+    margin-left: 0.3em;
 }
 
 .exp-quote.pretext-ready .pretext-line {
     border-left: 2px solid rgba(219, 91, 49, 0.22);
     padding-left: 12px;
     margin-left: 4px;
+    margin-bottom: 0.25em;
+    background: linear-gradient(90deg, rgba(219, 91, 49, 0.08), transparent 92%);
 }
 
 .blog-grid {

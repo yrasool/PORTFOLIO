@@ -109,6 +109,10 @@ async function enhanceTypographyWithPretext() {
                 const lineNode = document.createElement("span");
                 lineNode.className = "pretext-line";
                 lineNode.style.setProperty("--line-index", wrapper.childElementCount);
+                if (typeof line.width === "number") {
+                    lineNode.style.setProperty("--line-width", `${Math.ceil(line.width)}px`);
+                }
+                lineNode.dataset.parity = wrapper.childElementCount % 2 === 0 ? "even" : "odd";
                 lineNode.textContent = line.text;
                 wrapper.appendChild(lineNode);
             });
