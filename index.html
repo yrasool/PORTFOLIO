@@ -3,205 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yusra Rasool's Portfolio">
-    <title>Yusra Rasool | Portfolio</title>
+    <meta name="description" content="Yusra Rasool builds data systems, AI products, and polished web experiences.">
+    <title>Yusra Rasool | Data, AI, and Product Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- About Me Section -->
-    <section id="about-me">
-        <div class="about-container">
-            <img src="myphoto.jpeg" alt="Yusra Rasool" class="profile-photo">
-            <h1>Yusra Rasool</h1>
-            <p>Software Developer | Engineer</p>
-            <p>Computer Science Student | AI Researcher | Data & Software Engineer.Building scalable data platforms , predictive machine learning models , and full-stack applications.I build intelligent, end-to-end solutions that turn complex data into actionable insights.</p>
-        </div>
-    </section>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#top">YR</a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <!-- Projects Section (Moved to the top) -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card project-card-1">
-                <h3>Rate My Housing</h3>
-                <a href="https://github.com/yrasool/RateMyHousing" target="_blank">
-                    <img src="ratemyhousing-image.jpg" alt="Rate My Housing Project" class="project-image">
-                </a>
-                <p>A web application that allows users to rate and review housing options. Developed using React and Firebase, it helps students find the best housing based on ratings and reviews.</p>
-            </div>
-            <div class="project-card project-card-2">
-                <h3>CNN Project - TKAI Lab</h3>
-                <a href="https://colab.research.google.com/drive/1Mna8zRDHei17-yBNysS2ODIYutViAbVA?usp=sharing" target="_blank">
-                    <img src="tkai-logo.jpg" alt="CNN Project" class="project-image">
-                </a>
-                <p>Developed a Convolutional Neural Network (CNN) using PyTorch to classify chest X-ray images into COVID-19, Pneumonia, and Normal categories. <a href="https://colab.research.google.com/drive/1Mna8zRDHei17-yBNysS2ODIYutViAbVA?usp=sharing" target="_blank">View Colab Notebook</a></p>
-            </div>
-            <div class="project-card project-card-3">
-                <h3>LangChain AI Agent</h3>
-                <a href="https://github.com/yrasool/LangChain-Agent" target="_blank">
-                  <img src="AI AGENT.jpg" alt="LangChain AI Agent Project" class="project-image">
-                </a>
-                 <p>Systems Inspector powered by LangGraph and LangChain. This AI agent analyzes and monitors complex systems, automates workflows, and interacts with data using advanced language model capabilities. Built for extensibility, diagnostics, and automation.</p>
-            </div>
-              <div class="project-card project-card-4">
-                <h3>Databricks Caster-Breakout-Prediction</h3>
-                <a href="https://github.com/yrasool/-Caster-Breakout-Prediction" target="_blank">
-                  <img src="data.jpg" alt="Databricks Caster-Breakout-Prediction" class="project-image">
-                </a>
-                 <p>This project is a Databricks notebook that uses PySpark to analyze historical caster data from a steel manufacturing plant. The primary goal is to build a machine learning model, specifically a Random Forest Classifier, to predict breakout events..</p>
-            </div>
-            <div class="project-card project-card-5"> 
-                <h3> Self-supervised Learning BYOL </h3>
-                <a href="https://github.com/yrasool/BYOL-self-supervised-learning-on-CIFAR-images" target="_blank">
-                  <img src="BYOL.png" alt="Self-supervised Learning BYOL" class="project-image">
-                </a>
-                 <p>BYOL. Bootstrap Your Own Latent (BYOL), is a new algorithm for self-supervised learning of image representations</p>
-            </div>
-            <div class="project-card project-card-6">
-                <h3>Projects in C</h3>
-                <a href="https://github.com/yrasool/PROJECTS-IN-C" target="_blank">
-                    <img src="c.jpg" alt="Projects in C" class="project-image">
-                </a>
-                <p>A collection of projects implemented in C, including data structures like linked lists and algorithms such as sorting and searching techniques.</p>
-            </div>
-        </div>
-    
-    
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="experience-card">
-                <div class="exp-date">May 2025 – Aug 2025</div>
-                <div class="exp-content">
-                    <div class="exp-header">
-                        <img src="nucor-logo.jpg" alt="Nucor Logo" class="experience-logo">
-                        <div>
-                          <h3>Data Intern</h3>
-                          <div class="exp-company">Nucor</div>
+        <main id="top">
+            <section class="hero" data-reveal>
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow">Portfolio / Data / AI / Product</p>
+                    <h1>
+                        Building systems that feel
+                        <span>sharp, useful, and alive.</span>
+                    </h1>
+                    <p class="hero-text">
+                        I am Yusra Rasool, a software engineer and AI researcher focused on full-stack products,
+                        machine learning, and data-intensive systems. I like interfaces with presence and backend
+                        systems that carry real operational weight.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">See selected work</a>
+                        <a class="button button-secondary" href="https://github.com/yrasool" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-parallax>
+                    <div class="portrait-card">
+                        <img src="myphoto.jpeg" alt="Portrait of Yusra Rasool" class="profile-photo">
+                        <div class="portrait-meta">
+                            <p>Based in Florida</p>
+                            <p>Computer Science + AI Research</p>
                         </div>
                     </div>
-                    <ul>
-                        <li>Processed and engineered 400 GB of steel mill castor operational data in Databricks.</li>
-                        <li>Used MLflow to build and track an ML model that forecasted operational disruptions with 89% accuracy.</li>
-                        <li>Designed a custom C3 AI agent for data analysis, achieving 95% accuracy rate for breakout prediction.</li>
-                        <li>Architected the foundational Informatica Data Marketplace for Nucor, serving critical corporate functions.</li>
-                    </ul>
+                    <div class="floating-note floating-note-top">
+                        <span>400 GB+</span>
+                        <p>Operational data processed and modeled in Databricks.</p>
+                    </div>
+                    <div class="floating-note floating-note-bottom">
+                        <span>89%</span>
+                        <p>Forecasting accuracy on industrial disruption prediction.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="experience-card">
-                <div class="exp-date">May 2023 – current</div>
-                <div class="exp-content">
-                    <div class="exp-header">
-                        <img src="USFlogo.jpg" alt="USF Logo" class="experience-logo">
-                        <div>
-                          <h3>USF Business and Finance Shared Services —Student Assistant</h3>
-                          <div class="exp-company">University of South Florida</div>
+            </section>
+
+            <section class="metrics-strip" aria-label="Highlights" data-reveal>
+                <article>
+                    <span>Research</span>
+                    <strong>Deep learning, self-supervised learning, representation alignment</strong>
+                </article>
+                <article>
+                    <span>Engineering</span>
+                    <strong>Databricks, Spark, Python, product delivery, end-to-end systems</strong>
+                </article>
+                <article>
+                    <span>Focus</span>
+                    <strong>Interfaces that present technical work with more intent and energy</strong>
+                </article>
+            </section>
+
+            <section class="marquee-band" aria-label="Portfolio themes">
+                <div class="marquee-track">
+                    <span>AI systems</span>
+                    <span>data platforms</span>
+                    <span>editorial interfaces</span>
+                    <span>research notes</span>
+                    <span>product engineering</span>
+                    <span>machine learning</span>
+                    <span>AI systems</span>
+                    <span>data platforms</span>
+                    <span>editorial interfaces</span>
+                    <span>research notes</span>
+                    <span>product engineering</span>
+                    <span>machine learning</span>
+                </div>
+            </section>
+
+            <section class="section section-featured" id="projects">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Selected Projects</p>
+                    <h2>Featured builds with a stronger visual presence.</h2>
+                    <p>
+                        Two recent pieces lead the project section now: an editorial country experience and a
+                        Ramadan tracking tool, alongside prior work in ML, data systems, and product engineering.
+                    </p>
+                </div>
+
+                <div class="featured-grid">
+                    <article class="feature-card feature-card-dark" data-reveal>
+                        <div class="feature-label">Featured / Editorial Web</div>
+                        <h3>Siyaq: Qatar Country Experience</h3>
+                        <p>
+                            A rich, story-first country page that blends place, rhythm, and interface. It shows the
+                            kind of immersive web direction I want this portfolio to signal.
+                        </p>
+                        <ul class="feature-tags">
+                            <li>Editorial Layout</li>
+                            <li>Worldbuilding</li>
+                            <li>Visual Storytelling</li>
+                        </ul>
+                        <a href="https://siyaq.pages.dev/country/qatar" target="_blank" rel="noreferrer">Open project</a>
+                    </article>
+
+                    <article class="feature-card feature-card-accent" data-reveal>
+                        <div class="feature-label">Featured / Utility Product</div>
+                        <h3>Ramadan Tracker</h3>
+                        <p>
+                            A focused tool for tracking Ramadan habits, goals, and progress. Simple utility,
+                            clear intent, and strong user-centered product thinking.
+                        </p>
+                        <ul class="feature-tags">
+                            <li>Personal Tooling</li>
+                            <li>Frontend Product</li>
+                            <li>Habit Tracking</li>
+                        </ul>
+                        <a href="https://yrasool.github.io/ramadan-tracker/" target="_blank" rel="noreferrer">Open project</a>
+                    </article>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card" data-reveal>
+                        <img src="ratemyhousing-image.jpg" alt="Rate My Housing preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">Full-stack Product</p>
+                            <h3>Rate My Housing</h3>
+                            <p>Student housing reviews built with React and Firebase to help people make better housing decisions faster.</p>
+                            <a href="https://github.com/yrasool/RateMyHousing" target="_blank" rel="noreferrer">View repo</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-reveal>
+                        <img src="AI AGENT.jpg" alt="LangChain AI agent preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">AI Systems</p>
+                            <h3>LangGraph Systems Inspector</h3>
+                            <p>An AI agent for system analysis, workflow automation, diagnostics, and extensible tooling orchestration.</p>
+                            <a href="https://github.com/yrasool/LangChain-Agent" target="_blank" rel="noreferrer">View repo</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-reveal>
+                        <img src="data.jpg" alt="Databricks breakout prediction preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">Data + ML</p>
+                            <h3>Caster Breakout Prediction</h3>
+                            <p>PySpark and Random Forest modeling for steel manufacturing signals, built to predict breakout risk from historical plant data.</p>
+                            <a href="https://github.com/yrasool/-Caster-Breakout-Prediction" target="_blank" rel="noreferrer">View repo</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-reveal>
+                        <img src="BYOL.png" alt="BYOL self supervised learning preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">Research</p>
+                            <h3>BYOL on CIFAR</h3>
+                            <p>Self-supervised image representation learning work exploring Bootstrap Your Own Latent on CIFAR images.</p>
+                            <a href="https://github.com/yrasool/BYOL-self-supervised-learning-on-CIFAR-images" target="_blank" rel="noreferrer">View repo</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section journal-section" id="blog">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Blog / Notes</p>
+                    <h2>Writing about systems, research, and interface decisions.</h2>
+                    <p>
+                        This section introduces an editorial rhythm to the site. It frames the portfolio as an
+                        ongoing practice instead of a static resume.
+                    </p>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card" data-reveal>
+                        <p class="blog-meta">In Progress</p>
+                        <h3>Designing products that make technical work easier to trust</h3>
+                        <p>Notes on clarity, interaction design, and what makes tools feel reliable rather than merely functional.</p>
+                    </article>
+                    <article class="blog-card" data-reveal>
+                        <p class="blog-meta">Draft</p>
+                        <h3>What industrial ML projects teach you about scope, messiness, and real constraints</h3>
+                        <p>A field report from operational datasets, prediction pipelines, and the gap between experiments and deployment.</p>
+                    </article>
+                    <article class="blog-card" data-reveal>
+                        <p class="blog-meta">Research Log</p>
+                        <h3>Representation learning, autoencoders, and the parts of research worth keeping</h3>
+                        <p>A running archive of experiments, reading notes, and lessons from model development work.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section experience-section" id="experience">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Experience</p>
+                    <h2>Work shaped by data scale, research depth, and shipping mindset.</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="experience-card" data-reveal>
+                        <div class="exp-date">May 2025 - Aug 2025</div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <img src="nucor-logo.jpg" alt="Nucor logo" class="experience-logo">
+                                <div>
+                                    <h3>Data Intern</h3>
+                                    <p class="exp-company">Nucor</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Processed and engineered 400 GB of steel mill caster data in Databricks.</li>
+                                <li>Tracked ML experiments with MLflow and reached 89% forecasting accuracy on disruption prediction.</li>
+                                <li>Designed a custom C3 AI agent for analysis workflows and breakout prediction support.</li>
+                                <li>Helped architect the foundational Informatica Data Marketplace for broader business use.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-card" data-reveal>
+                        <div class="exp-date">May 2023 - Present</div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <img src="USFlogo.jpg" alt="University of South Florida logo" class="experience-logo">
+                                <div>
+                                    <h3>Student Assistant, Business and Finance Shared Services</h3>
+                                    <p class="exp-company">University of South Florida</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Led reconciliation work across employee charges and monthly bank statement review.</li>
+                                <li>Used FAST, JIRA, and Python automation to reduce repetitive invoice and vendor extraction work.</li>
+                                <li>Supported operational accuracy while working inside real administrative and compliance constraints.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-card" data-reveal>
+                        <div class="exp-date">Dec 2022 - Present</div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <img src="tkai-logo.jpg" alt="TKAI Lab logo" class="experience-logo">
+                                <div>
+                                    <h3>Undergraduate Researcher</h3>
+                                    <p class="exp-company">TKAI Lab</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Designed Local Representation Alignment work for deep autoencoders.</li>
+                                <li>Reached 93% accuracy on FMNIST and MNIST experiments using AE and VAE models.</li>
+                                <li>Built a research workflow grounded in iteration, evaluation, and technical communication.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section skills-section" id="skills">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>Technical range across product, modeling, and data infrastructure.</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skills-card" data-reveal>
+                        <h3>Programming</h3>
+                        <div class="skills-list">
+                            <span>Python</span>
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>SQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Django</span>
+                            <span>Spark</span>
+                            <span>PyTorch</span>
+                            <span>TensorFlow</span>
+                            <span>NumPy</span>
+                            <span>RISC-V</span>
+                        </div>
+                    </article>
+                    <article class="skills-card" data-reveal>
+                        <h3>Platforms and Tools</h3>
+                        <div class="skills-list">
+                            <span>Databricks</span>
+                            <span>MLflow</span>
+                            <span>Microsoft Fabric</span>
+                            <span>Informatica</span>
+                            <span>GitHub</span>
+                            <span>JIRA</span>
+                            <span>C3 AI</span>
+                            <span>LangChain</span>
+                            <span>Hugging Face</span>
+                            <span>Firebase</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section contact-section" id="contact">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Open to software, data, and AI roles with real product ownership.</h2>
+                </div>
+
+                <div class="contact-panel" data-reveal>
+                    <div>
+                        <p class="contact-label">Links</p>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/yusra-rasool-5963b11b1/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="https://github.com/yrasool" target="_blank" rel="noreferrer">GitHub</a>
                         </div>
                     </div>
-                    <ul>
-                        <li>Led a team of 3 for end-to-end reconciliation of charges for 156 employees.</li>
-                        <li>Reconciled 60+ monthly bank statements, ensuring financial accuracy and compliance.</li>
-                        <li>Leveraged FAST database, JIRA, and Python to automate invoice/vendor extraction, reducing manual work by 15%.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="experience-card">
-                <div class="exp-date">Dec 2022 – current</div>
-                <div class="exp-content">
-                    <div class="exp-header">
-                        <img src="tkai-logo.jpg" alt="TKAI Lab Logo" class="experience-logo">
-                        <div>
-                          <h3>Undergraduate Researcher</h3>
-                          <div class="exp-company">TKAI Lab</div>
-                        </div>
+                    <div>
+                        <p class="contact-label">Email</p>
+                        <p class="contact-copy">yrasool@usf.edu</p>
+                        <p class="contact-copy">yusrarasool9@gmail.com</p>
+                        <p class="contact-copy">ryusra9@gmail.com</p>
                     </div>
-                    <ul>
-                        <li>Designed the Local Representation Alignment (LRA) algorithm for deep autoencoders.</li>
-                        <li>Achieved 93% accuracy on FMNIST/MNIST datasets using AE and VAE models.</li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-        <!-- Skills Section (Added after Projects) -->
-<!-- Replace your current Skills section with this -->
-    <section class="skills-section">
-       <h2 class="skills-title">&lt;/&gt; Technical Skills</h2>
-          <div class="skills-grid">
-           <div class="skills-card">
-             <h3>Programming</h3>
-               <div class="skills-list">
-                   <span>Python</span>
-                   <span>C</span>
-                   <span>C++</span>
-                   <span>PyTorch</span>
-                   <span>TensorFlow</span>
-                   <span>Numpy</span>
-                   <span>RISC-V</span>
-                   <span>HTML</span>
-                   <span>CSS</span>
-                   <span>Django</span>
-                   <span>SQL</span>
-                   <span>Spark</span>
-               </div>
-           </div>
-         <div class="skills-card">
-           <h3>Technologies</h3>
-             <div class="skills-list">
-                <span>Git/GitHub</span>
-                <span>Artificial Intelligence</span>
-                <span>API</span>
-                <span>Databricks</span>
-                <span>Microsoft Fabric</span>
-                <span>Informatica</span>
-                <span>JIRA</span>
-                <span>C3 AI</span>
-                <span>Lang Chain</span>
-                <span>Hugging Face</span>  
-             </div>
-           </div>
-          </div>
-    </section>
+            </section>
+        </main>
 
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Connect with me on:</p>
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/yusra-rasool-5963b11b1/" target="_blank">
-                    <img src="linkedinlogo.jpg" alt="LinkedIn" class="contact-logo">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/yrasool" target="_blank">
-                    <img src="githulogo.jpg" alt="GitHub" class="contact-logo">
-                </a>
-                <a>
-                    ryusra9@gmail.com , yusrarasool9@gmail.com, yrasool@usf.edu
-                </a>
-            </li>
-               
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Yusra Rasool. All Rights Reserved.</p>
-    </footer>
+        <footer class="site-footer">
+            <p>&copy; 2026 Yusra Rasool</p>
+            <p>Designed as a sharper portfolio front for research, engineering, and product work.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
