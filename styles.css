@@ -561,6 +561,12 @@ img {
     line-height: 1.65;
 }
 
+.blog-link {
+    display: inline-flex;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
 .blog-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
