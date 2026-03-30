@@ -104,6 +104,8 @@ async function enhanceTypographyWithPretext() {
 
             const wrapper = document.createElement("span");
             wrapper.className = "pretext-lines";
+            const styleMode = element.dataset.pretextStyle || "default";
+            wrapper.dataset.pretextStyle = styleMode;
 
             lines.forEach((line) => {
                 const lineNode = document.createElement("span");
