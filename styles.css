@@ -147,6 +147,32 @@ img {
     line-height: 1.7;
 }
 
+.hero-tags,
+.contact-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-tags {
+    margin-top: 22px;
+}
+
+.hero-tags span,
+.contact-strip span,
+.contact-strip a {
+    padding: 10px 14px;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    color: var(--text);
+    font-size: 0.92rem;
+}
+
+.contact-strip {
+    margin-top: 22px;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -359,6 +385,63 @@ img {
     font-size: clamp(2.8rem, 6vw, 4.6rem);
 }
 
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 18px;
+}
+
+.about-card,
+.stat-card {
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 28px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+.about-card {
+    padding: 28px;
+}
+
+.about-list {
+    display: grid;
+    gap: 16px;
+    padding-left: 20px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat-card {
+    min-height: 180px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-card strong {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(3rem, 5vw, 4.6rem);
+    font-weight: 400;
+    line-height: 0.92;
+}
+
+.stat-card span {
+    max-width: 14ch;
+    color: var(--muted);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+}
+
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -539,6 +622,13 @@ img {
     font-weight: 700;
 }
 
+.exp-quote {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.7;
+}
+
 .exp-content ul {
     padding-left: 18px;
 }
@@ -641,6 +731,8 @@ img {
     .featured-grid,
     .project-grid,
     .blog-grid,
+    .about-grid,
+    .stats-grid,
     .skills-grid,
     .metrics-strip,
     .contact-panel,
@@ -723,6 +815,12 @@ img {
     .floating-note {
         max-width: 180px;
         padding: 14px;
+    }
+
+    .hero-tags span,
+    .contact-strip span,
+    .contact-strip a {
+        font-size: 0.86rem;
     }
 
     .marquee-track {
