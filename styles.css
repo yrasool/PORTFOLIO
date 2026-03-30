@@ -808,6 +808,19 @@ img {
     background: linear-gradient(90deg, rgba(219, 91, 49, 0.08), transparent 92%);
 }
 
+.exp-summary[data-pretext-style="manifesto"] .pretext-line {
+    margin-bottom: 0.14em;
+    padding: 0.08em 0.24em 0.12em 0.16em;
+    border-radius: 0 18px 18px 0;
+    border-left: 3px solid rgba(63, 83, 53, 0.22);
+    background:
+        linear-gradient(90deg, rgba(63, 83, 53, 0.1), rgba(212, 163, 73, 0.08) 56%, transparent 100%);
+}
+
+.exp-summary[data-pretext-style="manifesto"] .pretext-line[data-parity="odd"] {
+    margin-left: 0.48em;
+}
+
 .blog-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -877,6 +890,14 @@ img {
     color: var(--muted);
     font-style: italic;
     line-height: 1.7;
+}
+
+.exp-summary {
+    margin: 0 0 18px;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.18rem, 1.8vw, 1.55rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
 }
 
 .exp-content ul {
