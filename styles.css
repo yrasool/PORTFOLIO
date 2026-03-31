@@ -247,6 +247,14 @@ img {
     letter-spacing: -0.035em;
 }
 
+.hero-ui-note {
+    max-width: 46ch;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
 .hero-board-side {
     display: grid;
     gap: 14px;
@@ -459,8 +467,6 @@ img {
 
 .metrics-strip article,
 .project-card,
-.blog-card,
-.skills-card,
 .contact-panel,
 .experience-card {
     border: 1px solid rgba(20, 20, 20, 0.08);
@@ -539,8 +545,7 @@ img {
     gap: 18px;
 }
 
-.method-board,
-.method-note {
+.method-board {
     border: 1px solid rgba(20, 20, 20, 0.08);
     border-radius: 32px;
     background: var(--surface);
@@ -573,26 +578,32 @@ img {
     letter-spacing: -0.03em;
 }
 
-.method-notes {
+.method-points {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 6px;
+}
+
+.method-point {
+    display: grid;
+    grid-template-columns: 180px 1fr;
     gap: 18px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(20, 20, 20, 0.08);
 }
 
-.method-note {
-    min-height: 220px;
-    padding: 24px;
+.method-point-label,
+.skills-heading {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
-.method-note h3 {
-    margin-bottom: 12px;
-    font-size: 1.35rem;
-    line-height: 1.14;
-}
-
-.method-note p:last-child {
+.method-point p:last-child {
     color: var(--muted);
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 .pretext-section {
@@ -709,6 +720,50 @@ img {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: 18px;
+}
+
+.about-layout {
+    display: grid;
+}
+
+.about-panel {
+    padding: 30px;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 30px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+.about-intro {
+    max-width: 54ch;
+    margin-bottom: 24px;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+.about-columns {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.about-facts {
+    display: grid;
+    gap: 14px;
+    padding-top: 4px;
+}
+
+.about-facts p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.about-facts strong {
+    color: var(--text);
 }
 
 .about-card,
@@ -833,9 +888,33 @@ img {
     font-weight: 700;
 }
 
-.project-grid,
-.blog-grid,
-.skills-grid {
+.project-rail {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+    gap: 28px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.08);
+}
+
+.project-row-meta h3 {
+    margin-bottom: 0;
+    font-size: 1.55rem;
+    line-height: 1.12;
+}
+
+.project-row-copy {
+    max-width: 60ch;
+    color: var(--muted);
+    line-height: 1.72;
+}
+
+.project-grid {
     display: grid;
     gap: 18px;
 }
@@ -865,8 +944,7 @@ img {
 }
 
 .project-content h3,
-.blog-card h3,
-.skills-card h3,
+.journal-item h3,
 .experience-card h3 {
     margin-bottom: 12px;
     font-size: 1.4rem;
@@ -874,7 +952,7 @@ img {
 }
 
 .project-content p,
-.blog-card p,
+.journal-item p,
 .exp-content li,
 .contact-copy {
     color: var(--muted);
@@ -991,19 +1069,32 @@ img {
     margin-left: 0.48em;
 }
 
-.blog-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.journal-list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(20, 20, 20, 0.12);
 }
 
-.blog-card {
-    min-height: 240px;
-    padding: 24px;
-    transition: transform 0.32s ease, background-color 0.32s ease;
+.journal-item {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 24px;
+    align-items: start;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.08);
 }
 
-.blog-card:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 249, 239, 0.92);
+.journal-item .blog-meta {
+    margin: 0;
+    padding-top: 4px;
+}
+
+.journal-item h3 {
+    margin: 0;
+}
+
+.journal-item p {
+    margin: 0;
 }
 
 .experience-section .section-heading h2,
@@ -1079,23 +1170,21 @@ img {
     margin-top: 8px;
 }
 
-.skills-grid {
+.skills-columns {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.skills-card {
-    padding: 24px;
-    transition: transform 0.32s ease;
-}
-
-.skills-card:hover {
-    transform: translateY(-6px);
+    gap: 28px;
+    padding-top: 8px;
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.skills-heading {
+    margin-bottom: 16px;
 }
 
 .skills-list span {
@@ -1185,14 +1274,16 @@ img {
     .hero-board,
     .featured-grid,
     .method-layout,
-    .method-notes,
+    .method-points,
     .pretext-layout,
     .pretext-explainer,
     .project-grid,
-    .blog-grid,
+    .project-row,
+    .journal-item,
     .about-grid,
+    .about-columns,
     .stats-grid,
-    .skills-grid,
+    .skills-columns,
     .metrics-strip,
     .contact-panel,
     .experience-card {
@@ -1237,6 +1328,11 @@ img {
 
     .method-sidebar {
         position: static;
+    }
+
+    .method-point {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .feature-card {
@@ -1315,12 +1411,10 @@ img {
 
     .feature-card,
     .project-content,
-    .blog-card,
     .pretext-intro,
     .pretext-board,
     .pretext-step,
     .pretext-callout,
-    .skills-card,
     .contact-panel,
     .experience-card {
         border-radius: 24px;
