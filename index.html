@@ -17,6 +17,7 @@
             <a class="brand" href="#top">YR</a>
             <nav class="site-nav" aria-label="Primary navigation">
                 <a href="#projects">Projects</a>
+                <a href="#pretext-lab">Pretext</a>
                 <a href="#blog">Blog</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
@@ -197,6 +198,73 @@
                             </article>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="section pretext-section" id="pretext-lab">
+                <div class="pretext-layout">
+                    <div class="pretext-intro" data-reveal>
+                        <p class="eyebrow">Lab Note / Browser Rendering</p>
+                        <h2 data-pretext data-pretext-style="heading">Why Pretext matters if you care about browser performance, not just typography.</h2>
+                        <p>
+                            If you only see a text-layout library, the release does not look like a big deal. The
+                            context is browser layout cost. That is where the idea becomes interesting.
+                        </p>
+                    </div>
+
+                    <article class="pretext-board" data-reveal>
+                        <p class="pretext-kicker">Core Idea</p>
+                        <p class="pretext-manifesto" data-pretext data-pretext-style="manifesto">
+                            When you write width: 300px on a div, the browser still decides where the text wraps,
+                            which word moves to the next line, how tall the block becomes, and how spacing behaves.
+                            That layout work is expensive. Pretext shifts text measurement out of DOM layout and into
+                            a canvas-based prepare step, so future layout passes become cached math instead of reflow.
+                        </p>
+                    </article>
+
+                    <div class="pretext-explainer">
+                        <article class="pretext-step" data-reveal>
+                            <span class="pretext-step-index">01</span>
+                            <h3>The browser owns line breaks by default</h3>
+                            <p>
+                                Long text wrapping is not something CSS fully specifies line by line. The rendering
+                                engine resolves font metrics, spacing, bidirectional text, and line breaking during
+                                layout.
+                            </p>
+                        </article>
+                        <article class="pretext-step" data-reveal>
+                            <span class="pretext-step-index">02</span>
+                            <h3>DOM measurement can trigger reflow</h3>
+                            <p>
+                                Asking the DOM how large text is can force the browser to run that layout pipeline
+                                again. Once is usually fine. Doing it repeatedly across many nodes can become a real
+                                performance problem.
+                            </p>
+                        </article>
+                        <article class="pretext-step" data-reveal>
+                            <span class="pretext-step-index">03</span>
+                            <h3>Pretext caches the expensive part</h3>
+                            <p>
+                                The first <code>prepare()</code> pass is still expensive because measurement has to
+                                happen somewhere. After that, resize and relayout work can come from cached values,
+                                which means less browser layout churn and more predictable math.
+                            </p>
+                        </article>
+                    </div>
+
+                    <article class="pretext-callout" data-reveal>
+                        <p class="pretext-kicker">Small Experiment</p>
+                        <h3 data-pretext data-pretext-style="card">A magazine-style layout built around Pretext.</h3>
+                        <p>
+                            I wanted to make the point tangible, not only theoretical. The magazine section in this
+                            experiment uses Pretext to control text layout more directly. Extending the whole interface
+                            to buttons and inputs is still more complex, but the direction is promising.
+                        </p>
+                        <div class="pretext-links">
+                            <a class="button button-primary" href="https://atbrakhi.com/playground/magazine.html" target="_blank" rel="noreferrer">Open the experiment</a>
+                            <a class="button button-secondary" href="#blog">See more notes</a>
+                        </div>
+                    </article>
                 </div>
             </section>
 
