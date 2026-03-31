@@ -1270,7 +1270,6 @@ img {
 
 @media (max-width: 980px) {
     .hero,
-    .platform-strip,
     .hero-board,
     .featured-grid,
     .method-layout,
@@ -1292,6 +1291,10 @@ img {
 
     .hero {
         min-height: auto;
+    }
+
+    .platform-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero h1 span {
@@ -1374,6 +1377,10 @@ img {
     .hero-board-main,
     .hero-note {
         border-radius: 24px;
+    }
+
+    .platform-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero-visual {
