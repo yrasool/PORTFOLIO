@@ -153,6 +153,10 @@ img {
     margin-bottom: 20px;
 }
 
+.platform-strip-compact {
+    margin-bottom: 0;
+}
+
 .platform-card {
     display: flex;
     align-items: center;
@@ -165,10 +169,22 @@ img {
     box-shadow: var(--shadow);
 }
 
+.platform-strip-compact .platform-card {
+    padding: 14px 14px 14px 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: none;
+}
+
 .platform-logo {
     width: 28px;
     height: 28px;
     flex: 0 0 auto;
+}
+
+.platform-strip-compact .platform-logo {
+    width: 24px;
+    height: 24px;
 }
 
 .platform-label {
@@ -176,10 +192,18 @@ img {
     font-weight: 700;
 }
 
+.platform-strip-compact .platform-label {
+    font-size: 0.9rem;
+}
+
 .platform-copy {
     color: var(--muted);
     font-size: 0.88rem;
     line-height: 1.4;
+}
+
+.platform-strip-compact .platform-copy {
+    font-size: 0.8rem;
 }
 
 .hero-board {
