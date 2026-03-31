@@ -247,14 +247,6 @@ img {
     letter-spacing: -0.035em;
 }
 
-.hero-ui-note {
-    max-width: 46ch;
-    margin-top: 18px;
-    color: var(--muted);
-    font-size: 0.98rem;
-    line-height: 1.65;
-}
-
 .hero-board-side {
     display: grid;
     gap: 14px;
@@ -606,116 +598,6 @@ img {
     line-height: 1.7;
 }
 
-.pretext-section {
-    padding-top: 18px;
-}
-
-.pretext-layout {
-    display: grid;
-    grid-template-columns: 0.88fr 1.12fr;
-    gap: 18px;
-    align-items: start;
-}
-
-.pretext-intro,
-.pretext-board,
-.pretext-step,
-.pretext-callout {
-    border: 1px solid rgba(20, 20, 20, 0.08);
-    border-radius: 30px;
-    background: var(--surface);
-    backdrop-filter: blur(12px);
-    box-shadow: var(--shadow);
-}
-
-.pretext-intro,
-.pretext-callout {
-    padding: 28px;
-}
-
-.pretext-intro h2 {
-    max-width: 12ch;
-    font-family: "Instrument Serif", serif;
-    font-size: clamp(2.5rem, 5vw, 4.3rem);
-    font-weight: 400;
-    line-height: 0.96;
-    letter-spacing: -0.04em;
-}
-
-.pretext-intro p:last-child,
-.pretext-callout p,
-.pretext-step p {
-    color: var(--muted);
-    line-height: 1.7;
-}
-
-.pretext-board {
-    grid-row: span 2;
-    padding: 30px;
-    background:
-        radial-gradient(circle at top right, rgba(63, 83, 53, 0.16), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(212, 163, 73, 0.12), transparent 30%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(244, 236, 220, 0.94) 100%);
-}
-
-.pretext-kicker {
-    display: inline-block;
-    margin-bottom: 18px;
-    color: var(--accent);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.pretext-manifesto {
-    font-family: "Instrument Serif", serif;
-    font-size: clamp(1.65rem, 2.35vw, 2.45rem);
-    line-height: 1;
-    letter-spacing: -0.032em;
-}
-
-.pretext-explainer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    grid-column: 1 / -1;
-}
-
-.pretext-step {
-    min-height: 220px;
-    padding: 24px;
-}
-
-.pretext-step-index {
-    display: inline-flex;
-    margin-bottom: 14px;
-    color: var(--olive);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-}
-
-.pretext-step h3,
-.pretext-callout h3 {
-    margin-bottom: 12px;
-    font-size: 1.42rem;
-    line-height: 1.18;
-}
-
-.pretext-callout {
-    background:
-        radial-gradient(circle at top left, rgba(219, 91, 49, 0.12), transparent 24%),
-        linear-gradient(180deg, rgba(255, 249, 239, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
-}
-
-.pretext-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 22px;
-}
-
 .about-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
@@ -888,32 +770,6 @@ img {
     font-weight: 700;
 }
 
-.project-rail {
-    display: grid;
-    gap: 0;
-    border-top: 1px solid rgba(20, 20, 20, 0.12);
-}
-
-.project-row {
-    display: grid;
-    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
-    gap: 28px;
-    padding: 24px 0;
-    border-bottom: 1px solid rgba(20, 20, 20, 0.08);
-}
-
-.project-row-meta h3 {
-    margin-bottom: 0;
-    font-size: 1.55rem;
-    line-height: 1.12;
-}
-
-.project-row-copy {
-    max-width: 60ch;
-    color: var(--muted);
-    line-height: 1.72;
-}
-
 .project-grid {
     display: grid;
     gap: 18px;
@@ -990,16 +846,6 @@ img {
     width: min(100%, var(--line-width, 100%));
 }
 
-[data-pretext-style="hero"] .pretext-line {
-    margin-bottom: 0.14em;
-    padding: 0.08em 0.24em 0.14em 0.14em;
-    border-left: 3px solid rgba(63, 83, 53, 0.28);
-    border-bottom: 1px solid rgba(63, 83, 53, 0.18);
-    background:
-        linear-gradient(90deg, rgba(63, 83, 53, 0.14), rgba(63, 83, 53, 0.04) 72%, transparent 100%);
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
-}
-
 [data-pretext-style="manifesto"] .pretext-line {
     margin-bottom: 0.18em;
     padding: 0.12em 0.32em 0.14em 0.2em;
@@ -1011,10 +857,6 @@ img {
 
 [data-pretext-style="manifesto"] .pretext-line[data-parity="odd"] {
     margin-left: 0.9em;
-}
-
-[data-pretext-style="hero"] .pretext-line[data-parity="odd"] {
-    margin-left: 0.58em;
 }
 
 [data-pretext-style="heading"] .pretext-line {
@@ -1100,8 +942,7 @@ img {
 .experience-section .section-heading h2,
 .skills-section .section-heading h2,
 .contact-section .section-heading h2,
-.journal-section .section-heading h2,
-.pretext-section .pretext-intro h2 {
+.journal-section .section-heading h2 {
     max-width: 14ch;
 }
 
@@ -1274,10 +1115,7 @@ img {
     .featured-grid,
     .method-layout,
     .method-points,
-    .pretext-layout,
-    .pretext-explainer,
     .project-grid,
-    .project-row,
     .journal-item,
     .about-grid,
     .about-columns,
@@ -1341,10 +1179,6 @@ img {
     .feature-card {
         position: relative;
         top: auto;
-    }
-
-    .pretext-board {
-        grid-row: auto;
     }
 
     .site-footer {
@@ -1418,10 +1252,6 @@ img {
 
     .feature-card,
     .project-content,
-    .pretext-intro,
-    .pretext-board,
-    .pretext-step,
-    .pretext-callout,
     .contact-panel,
     .experience-card {
         border-radius: 24px;

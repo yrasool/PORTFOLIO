@@ -160,47 +160,64 @@
             <section class="section section-featured" id="projects">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Selected Projects</p>
-                    <h2 data-pretext data-pretext-style="heading">A tighter set of projects that show problem framing, prototyping, and structured iteration.</h2>
+                    <h2 data-pretext data-pretext-style="heading">Projects that show problem framing, prototyping, and structured iteration.</h2>
                     <p>
-                        This section is intentionally selective. I care more about showing the kinds of systems and
-                        interfaces I like to work on than filling the page with more cards.
+                        A selection of projects that reflect the way I work across product thinking, systems analysis,
+                        and practical implementation.
                     </p>
                 </div>
 
-                <div class="project-rail">
-                    <article class="project-row" data-reveal>
-                        <div class="project-row-meta">
-                            <p class="project-type">Data Product / Pricing Signal Exploration</p>
-                            <h3 data-pretext data-pretext-style="card">Semirate</h3>
-                        </div>
-                        <p class="project-row-copy">
+                <div class="featured-grid">
+                    <article class="feature-card feature-card-dark" data-reveal>
+                        <div class="feature-label">Featured / Data Product Exploration</div>
+                        <h3 data-pretext data-pretext-style="card">Semirate</h3>
+                        <p>
                             A product exploration focused on turning messy market and pricing signals into something
-                            clearer, more structured, and easier to act on. The work centered on defining what mattered,
-                            what could be validated quickly, and how the interface should support fast interpretation.
+                            clearer, more structured, and easier to act on.
                         </p>
+                        <ul class="feature-tags">
+                            <li>Pricing Signals</li>
+                            <li>Product Framing</li>
+                            <li>Fast Interpretation</li>
+                        </ul>
                     </article>
 
-                    <article class="project-row" data-reveal>
-                        <div class="project-row-meta">
-                            <p class="project-type">Early-Stage Product Exploration</p>
-                            <h3 data-pretext data-pretext-style="card">Siyaq</h3>
-                        </div>
-                        <p class="project-row-copy">
+                    <article class="feature-card feature-card-accent" data-reveal>
+                        <div class="feature-label">Featured / Early-Stage Product Exploration</div>
+                        <h3 data-pretext data-pretext-style="card">Siyaq</h3>
+                        <p>
                             An exploration in how to turn a broad contextual-intelligence idea into a working product:
                             source ingestion, retrieval, structure, and enough interface logic to test whether the
                             concept actually helps someone make sense of a topic.
                         </p>
+                        <ul class="feature-tags">
+                            <li>Cloudflare Workers</li>
+                            <li>D1 + KV Cache</li>
+                            <li>Google Books + OpenAlex</li>
+                        </ul>
+                        <a href="https://siyaq.pages.dev/country/qatar" target="_blank" rel="noreferrer">Open project</a>
+                    </article>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card" data-reveal>
+                        <img src="AI AGENT.jpg" alt="LangChain AI agent preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">Systems Exploration</p>
+                            <h3>LangGraph Systems Inspector</h3>
+                            <p>An example of working through evolving requirements with engineers and tooling ideas in mind: diagnostics, workflow orchestration, and iterative systems analysis.</p>
+                            <a href="https://github.com/yrasool/LangChain-Agent" target="_blank" rel="noreferrer">View repo</a>
+                        </div>
                     </article>
 
-                    <article class="project-row" data-reveal>
-                        <div class="project-row-meta">
-                            <p class="project-type">Systems Exploration</p>
-                            <h3 data-pretext data-pretext-style="card">LangGraph Systems Inspector</h3>
+                    <article class="project-card" data-reveal>
+                        <img src="ratemyhousing-image.jpg" alt="Rate My Housing preview" class="project-image">
+                        <div class="project-content">
+                            <p class="project-type">Full-stack Product</p>
+                            <h3>Rate My Housing</h3>
+                            <p>Student housing reviews built with React and Firebase to help people make better housing decisions faster.</p>
+                            <a href="https://github.com/yrasool/RateMyHousing" target="_blank" rel="noreferrer">View repo</a>
                         </div>
-                        <p class="project-row-copy">
-                            An example of working through evolving requirements with engineers and tooling ideas in
-                            mind: diagnostics, workflow orchestration, and iterative systems analysis.
-                        </p>
                     </article>
                 </div>
             </section>
@@ -214,7 +231,7 @@
 
                     <div class="method-main">
                         <article class="method-board" data-reveal>
-                            <p class="method-kicker">Measured Text Board</p>
+                            <p class="method-kicker">Working Approach</p>
                             <p class="method-manifesto" data-pretext data-pretext-style="manifesto">
                                 I start by trying to understand what the problem actually is, what assumptions are being made,
                                 which constraints are real, which signals matter, and what version of the idea is small enough
