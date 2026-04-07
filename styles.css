@@ -907,6 +907,54 @@ img {
     opacity: 0.72;
 }
 
+.project-image-cli {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(circle at top left, rgba(63, 83, 53, 0.18), transparent 38%),
+        linear-gradient(180deg, #171717 0%, #262626 100%);
+}
+
+.cli-mock {
+    width: min(100%, 320px);
+    min-height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(8, 8, 8, 0.9);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+.cli-mock-bar {
+    display: flex;
+    gap: 8px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.cli-mock-bar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.cli-mock-body {
+    display: grid;
+    gap: 10px;
+    padding: 18px 16px 20px;
+    color: #d7f7d2;
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.cli-prompt {
+    color: #8ee38e;
+    font-weight: 700;
+}
+
 .project-content {
     padding: 22px;
     display: grid;
