@@ -196,9 +196,28 @@ img {
     flex: 0 0 auto;
 }
 
+.platform-initial {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.16), rgba(61, 83, 53, 0.14));
+    color: #17456b;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
 .platform-strip-compact .platform-logo {
     width: 24px;
     height: 24px;
+}
+
+.platform-strip-compact .platform-initial {
+    width: 24px;
+    height: 24px;
+    font-size: 0.66rem;
 }
 
 .platform-label {
