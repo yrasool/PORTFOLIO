@@ -797,6 +797,111 @@ img {
         linear-gradient(135deg, #c95630 0%, #8f3517 100%);
 }
 
+.feature-card-siyaq {
+    overflow: hidden;
+}
+
+.siyaq-visual {
+    position: relative;
+    min-height: 150px;
+    margin: 8px 0 22px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 22% 28%, rgba(255, 255, 255, 0.24), transparent 18%),
+        linear-gradient(135deg, rgba(20, 20, 20, 0.18), rgba(255, 255, 255, 0.08));
+}
+
+.siyaq-visual-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.siyaq-visual-top span {
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.siyaq-visual-main {
+    position: absolute;
+    inset: 48px 18px 18px;
+}
+
+.siyaq-node,
+.siyaq-link {
+    position: absolute;
+    display: block;
+}
+
+.siyaq-node {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.siyaq-node-primary {
+    left: 42%;
+    top: 32%;
+    width: 42px;
+    height: 42px;
+}
+
+.siyaq-node-small {
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 237, 188, 0.9);
+}
+
+.siyaq-node-a {
+    left: 8%;
+    top: 12%;
+}
+
+.siyaq-node-b {
+    right: 12%;
+    top: 8%;
+}
+
+.siyaq-node-c {
+    left: 18%;
+    bottom: 12%;
+}
+
+.siyaq-link {
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.34);
+    transform-origin: left center;
+}
+
+.siyaq-link-a {
+    left: 17%;
+    top: 30%;
+    width: 38%;
+    transform: rotate(16deg);
+}
+
+.siyaq-link-b {
+    left: 55%;
+    top: 40%;
+    width: 32%;
+    transform: rotate(-24deg);
+}
+
+.siyaq-link-c {
+    left: 27%;
+    bottom: 27%;
+    width: 32%;
+    transform: rotate(-18deg);
+}
+
 .feature-card:hover {
     transform: translateY(-8px) rotate(-0.5deg);
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.18);
