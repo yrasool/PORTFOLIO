@@ -754,6 +754,40 @@ img {
     align-items: start;
 }
 
+.role-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 22px;
+}
+
+.role-fit-grid article {
+    min-height: 158px;
+    padding: 20px;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 22px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(247, 238, 223, 0.76) 100%);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
+.role-fit-grid span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.role-fit-grid strong {
+    display: block;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.58;
+}
+
 .feature-card {
     position: sticky;
     top: 108px;
@@ -1077,6 +1111,80 @@ img {
 .cli-prompt {
     color: #8ee38e;
     font-weight: 700;
+}
+
+.project-image-grid {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(circle at 22% 24%, rgba(45, 87, 118, 0.18), transparent 34%),
+        radial-gradient(circle at 78% 36%, rgba(219, 91, 49, 0.18), transparent 30%),
+        linear-gradient(180deg, #edf3f0 0%, #d8e1d6 100%);
+}
+
+.grid-dashboard-mock {
+    width: min(100%, 330px);
+    min-height: 220px;
+    padding: 18px;
+    border: 1px solid rgba(36, 52, 44, 0.14);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 18px 34px rgba(36, 52, 44, 0.14);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 16px;
+}
+
+.grid-map {
+    position: relative;
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(63, 83, 53, 0.12), rgba(45, 87, 118, 0.16)),
+        repeating-linear-gradient(
+            45deg,
+            rgba(20, 20, 20, 0.08) 0,
+            rgba(20, 20, 20, 0.08) 1px,
+            transparent 1px,
+            transparent 14px
+        );
+    overflow: hidden;
+}
+
+.grid-map span {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 8px rgba(219, 91, 49, 0.16);
+}
+
+.grid-map span:nth-child(1) {
+    left: 22%;
+    top: 44%;
+}
+
+.grid-map span:nth-child(2) {
+    right: 20%;
+    top: 30%;
+}
+
+.grid-map span:nth-child(3) {
+    right: 34%;
+    bottom: 22%;
+}
+
+.grid-lines strong {
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.14em;
+}
+
+.grid-lines p {
+    color: var(--muted);
+    font-size: 0.86rem;
+    line-height: 1.45;
 }
 
 .project-image-learning {
@@ -1474,6 +1582,7 @@ img {
     .hero,
     .hero-board,
     .featured-grid,
+    .role-fit-grid,
     .method-layout,
     .method-points,
     .project-grid,
