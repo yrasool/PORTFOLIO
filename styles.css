@@ -26,9 +26,12 @@ html {
 body {
     font-family: "Space Grotesk", sans-serif;
     background:
+        linear-gradient(rgba(20, 20, 20, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 20, 20, 0.014) 1px, transparent 1px),
         radial-gradient(circle at top left, rgba(212, 163, 73, 0.18), transparent 28%),
         radial-gradient(circle at top right, rgba(219, 91, 49, 0.16), transparent 30%),
         linear-gradient(180deg, #f8f2e7 0%, #efe5d6 100%);
+    background-size: 48px 48px, 48px 48px, auto, auto, auto;
     color: var(--text);
     overflow-x: hidden;
 }
@@ -374,6 +377,129 @@ img {
     perspective: 1400px;
 }
 
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    left: 9%;
+    top: 16%;
+    width: 440px;
+    height: 440px;
+    border: 2px solid rgba(219, 91, 49, 0.34);
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.icon-orbit {
+    position: absolute;
+    inset: -12px -14px 0 -38px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.orbit-ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 16px 28px rgba(20, 20, 20, 0.12));
+}
+
+.orbit-ring-outer {
+    width: 410px;
+    height: 410px;
+    margin: -205px 0 0 -230px;
+    animation: orbit-spin 18s linear infinite;
+}
+
+.orbit-ring-inner {
+    width: 300px;
+    height: 300px;
+    margin: -150px 0 0 -175px;
+    animation: orbit-spin-reverse 13s linear infinite;
+}
+
+.icon-orbit:hover .orbit-ring {
+    animation-play-state: paused;
+}
+
+.orbit-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin: -27px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(247, 238, 223, 0.78));
+    box-shadow: 0 16px 40px rgba(20, 20, 20, 0.14);
+    color: var(--text);
+    font-weight: 700;
+    line-height: 1;
+    backdrop-filter: blur(14px);
+}
+
+.orbit-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.orbit-icon-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+.orbit-ring-outer .orbit-icon {
+    animation: orbit-keep-upright 18s linear infinite;
+}
+
+.orbit-ring-inner .orbit-icon {
+    animation: orbit-keep-upright-reverse 13s linear infinite;
+}
+
+.orbit-icon-databricks {
+    --orbit-angle: 14deg;
+    transform: rotate(14deg) translateX(205px) rotate(-14deg);
+}
+
+.orbit-icon-python {
+    --orbit-angle: 104deg;
+    transform: rotate(104deg) translateX(205px) rotate(-104deg);
+}
+
+.orbit-icon-azure {
+    --orbit-angle: 194deg;
+    transform: rotate(194deg) translateX(205px) rotate(-194deg);
+}
+
+.orbit-icon-sql {
+    --orbit-angle: 284deg;
+    transform: rotate(284deg) translateX(205px) rotate(-284deg);
+}
+
+.orbit-icon-ai {
+    --orbit-angle: 24deg;
+    transform: rotate(24deg) translateX(150px) rotate(-24deg);
+}
+
+.orbit-icon-powerbi {
+    --orbit-angle: 154deg;
+    transform: rotate(154deg) translateX(150px) rotate(-154deg);
+}
+
+.orbit-icon-cpp {
+    --orbit-angle: 274deg;
+    transform: rotate(274deg) translateX(150px) rotate(-274deg);
+}
+
 .portrait-card {
     position: absolute;
     inset: 36px 46px 36px 0;
@@ -449,6 +575,69 @@ img {
     right: 24px;
     bottom: 0;
     animation-delay: 1.5s;
+}
+
+.hero-map-stamp {
+    position: absolute;
+    left: 24px;
+    right: 28px;
+    bottom: 10px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(20, 20, 20, 0.16);
+    color: rgba(20, 20, 20, 0.48);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.proof-atlas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 16px 0 72px;
+    border-top: 1px solid rgba(20, 20, 20, 0.18);
+    border-bottom: 1px solid rgba(20, 20, 20, 0.18);
+    background: rgba(255, 249, 239, 0.42);
+    backdrop-filter: blur(10px);
+}
+
+.proof-atlas article {
+    min-height: 132px;
+    padding: 18px 18px 20px;
+}
+
+.proof-atlas article + article {
+    border-left: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.proof-atlas span,
+.project-card::before {
+    display: block;
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.proof-atlas strong {
+    display: block;
+    margin-top: 18px;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.proof-atlas p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
 }
 
 .metrics-strip,
@@ -965,6 +1154,7 @@ img {
 .project-grid {
     display: grid;
     gap: 18px;
+    counter-reset: project-card;
 }
 
 .project-grid {
@@ -972,10 +1162,26 @@ img {
 }
 
 .project-card {
+    position: relative;
     overflow: hidden;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(247, 238, 223, 0.82) 100%);
     transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+
+.project-card::before {
+    counter-increment: project-card;
+    content: "No. " counter(project-card, decimal-leading-zero);
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    z-index: 2;
+    padding: 7px 9px;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 249, 239, 0.82);
+    color: rgba(20, 20, 20, 0.64);
+    box-shadow: 0 10px 24px rgba(20, 20, 20, 0.08);
 }
 
 .project-card:hover {
@@ -1544,6 +1750,42 @@ img {
     }
 }
 
+@keyframes orbit-spin {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes orbit-spin-reverse {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes orbit-keep-upright {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes orbit-keep-upright-reverse {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
 @keyframes marquee {
     from {
         transform: translateX(0);
@@ -1581,6 +1823,7 @@ img {
 @media (max-width: 980px) {
     .hero,
     .hero-board,
+    .proof-atlas,
     .featured-grid,
     .role-fit-grid,
     .method-layout,
@@ -1621,8 +1864,50 @@ img {
         min-height: 520px;
     }
 
+    .hero-visual::before {
+        left: 50%;
+        top: 50%;
+        width: 360px;
+        height: 360px;
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+
+    .icon-orbit {
+        inset: 0;
+    }
+
+    .orbit-ring-outer {
+        width: 360px;
+        height: 360px;
+        margin: -180px 0 0 -180px;
+    }
+
+    .orbit-ring-inner {
+        width: 250px;
+        height: 250px;
+        margin: -125px 0 0 -125px;
+    }
+
+    .orbit-icon-databricks,
+    .orbit-icon-python,
+    .orbit-icon-azure,
+    .orbit-icon-sql {
+        transform: rotate(var(--orbit-angle)) translateX(180px) rotate(calc(-1 * var(--orbit-angle)));
+    }
+
+    .orbit-icon-ai,
+    .orbit-icon-powerbi,
+    .orbit-icon-cpp {
+        transform: rotate(var(--orbit-angle)) translateX(125px) rotate(calc(-1 * var(--orbit-angle)));
+    }
+
     .portrait-card {
         inset: 48px 0 28px;
+    }
+
+    .proof-atlas article + article {
+        border-left: 0;
+        border-top: 1px solid rgba(20, 20, 20, 0.12);
     }
 
     .floating-note-top {
@@ -1711,10 +1996,87 @@ img {
 
     .hero-visual {
         min-height: 420px;
+        overflow: hidden;
+    }
+
+    .hero-visual::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .icon-orbit {
+        inset: 8px 0 0;
+    }
+
+    .orbit-ring {
+        border-color: rgba(20, 20, 20, 0.06);
+    }
+
+    .orbit-ring-outer {
+        width: 310px;
+        height: 310px;
+        margin: -155px 0 0 -155px;
+    }
+
+    .orbit-ring-inner {
+        width: 218px;
+        height: 218px;
+        margin: -109px 0 0 -109px;
+    }
+
+    .orbit-icon {
+        width: 44px;
+        height: 44px;
+        margin: -22px;
+        border-radius: 15px;
+    }
+
+    .orbit-icon img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .orbit-icon-text {
+        font-size: 0.78rem;
+    }
+
+    .orbit-icon-databricks,
+    .orbit-icon-python,
+    .orbit-icon-azure,
+    .orbit-icon-sql {
+        transform: rotate(var(--orbit-angle)) translateX(155px) rotate(calc(-1 * var(--orbit-angle)));
+    }
+
+    .orbit-icon-ai,
+    .orbit-icon-powerbi,
+    .orbit-icon-cpp {
+        transform: rotate(var(--orbit-angle)) translateX(109px) rotate(calc(-1 * var(--orbit-angle)));
     }
 
     .portrait-card {
         inset: 34px 0 24px;
+    }
+
+    .hero-map-stamp {
+        left: 14px;
+        right: 14px;
+        bottom: 6px;
+        flex-wrap: wrap;
+        font-size: 0.58rem;
+        line-height: 1.5;
+    }
+
+    .proof-atlas {
+        margin: 6px 0 54px;
+    }
+
+    .proof-atlas article {
+        min-height: auto;
+        padding: 16px 2px 16px;
+    }
+
+    .proof-atlas strong {
+        margin-top: 10px;
     }
 
     .portrait-meta {
@@ -1774,5 +2136,10 @@ img {
         animation: none;
         transform: none;
         opacity: 1;
+    }
+
+    .orbit-ring,
+    .orbit-icon {
+        animation: none;
     }
 }
