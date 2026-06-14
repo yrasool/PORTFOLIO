@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="script.js"></script>
 </head>
@@ -49,12 +50,46 @@
                         <div class="hero-board-side">
                             <article class="hero-note">
                                 <p class="hero-note-label">Current Work</p>
-                                <p>Projects across automation, AI research, software systems, industrial data, archives, robotics, and grid-data tools.</p>
+                                <p>Automation, AI research, industrial data, archives, robotics, and grid tools.</p>
                             </article>
-                            <article class="hero-note">
-                                <p class="hero-note-label">Tools</p>
-                                <p>Python, SQL, TypeScript, React, C++, CUDA, C#, Databricks, Azure, Cloudflare, and Git.</p>
-                            </article>
+                            <div class="platform-strip platform-strip-compact platform-strip-rotating" aria-label="Core tools">
+                                <article class="platform-card platform-card-icon-only">
+                                    <img src="databricks-logo.svg" alt="Databricks logo" class="platform-logo">
+                                    <p class="platform-label">Databricks</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <img src="azure-logo.svg" alt="Microsoft Azure logo" class="platform-logo">
+                                    <p class="platform-label">Azure</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <span class="platform-initial" aria-hidden="true">SQL</span>
+                                    <p class="platform-label">SQL</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <span class="platform-initial" aria-hidden="true">AI</span>
+                                    <p class="platform-label">AI</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <span class="platform-initial" aria-hidden="true">Py</span>
+                                    <p class="platform-label">Python</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <span class="platform-initial" aria-hidden="true">C++</span>
+                                    <p class="platform-label">C++</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <img src="informatica-logo.svg" alt="Informatica logo" class="platform-logo">
+                                    <p class="platform-label">Informatica</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <img src="fabric-logo.svg" alt="Microsoft Fabric logo" class="platform-logo">
+                                    <p class="platform-label">Fabric</p>
+                                </article>
+                                <article class="platform-card platform-card-icon-only">
+                                    <img src="powerbi-logo.svg" alt="Power BI logo" class="platform-logo">
+                                    <p class="platform-label">Power BI</p>
+                                </article>
+                            </div>
                         </div>
                     </div>
                     <div class="contact-strip">
@@ -71,24 +106,19 @@
                     </div>
                 </div>
                 <div class="hero-visual" data-parallax>
-                    <div class="icon-orbit" aria-label="Core tools">
-                        <div class="orbit-ring orbit-ring-outer">
-                            <span class="orbit-icon orbit-icon-img orbit-icon-databricks">
-                                <img src="databricks-logo.svg" alt="Databricks">
-                            </span>
-                            <span class="orbit-icon orbit-icon-text orbit-icon-python">Py</span>
-                            <span class="orbit-icon orbit-icon-img orbit-icon-azure">
-                                <img src="azure-logo.svg" alt="Azure">
-                            </span>
-                            <span class="orbit-icon orbit-icon-text orbit-icon-sql">SQL</span>
-                        </div>
-                        <div class="orbit-ring orbit-ring-inner">
-                            <span class="orbit-icon orbit-icon-text orbit-icon-ai">AI</span>
-                            <span class="orbit-icon orbit-icon-img orbit-icon-powerbi">
-                                <img src="powerbi-logo.svg" alt="Power BI">
-                            </span>
-                            <span class="orbit-icon orbit-icon-text orbit-icon-cpp">C++</span>
-                        </div>
+                    <div class="concept-orbit" aria-label="Focus areas">
+                        <article class="orbit-card orbit-card-ai">
+                            <span>AI</span>
+                            <p>Agents, research, and practical tools.</p>
+                        </article>
+                        <article class="orbit-card orbit-card-data">
+                            <span>Data</span>
+                            <p>Pipelines, validation, archives, and dashboards.</p>
+                        </article>
+                        <article class="orbit-card orbit-card-software">
+                            <span>Software</span>
+                            <p>Automation systems and interfaces people use.</p>
+                        </article>
                     </div>
                     <div class="portrait-card">
                         <img src="myphoto.jpeg" alt="Portrait of Yusra Rasool" class="profile-photo">
@@ -96,14 +126,6 @@
                             <p>Based in Florida</p>
                             <p>Computer Science + AI Research</p>
                         </div>
-                    </div>
-                    <div class="floating-note floating-note-top">
-                        <span>AI</span>
-                        <p>Research, agents, representation learning, and practical tools.</p>
-                    </div>
-                    <div class="floating-note floating-note-bottom">
-                        <span>Data</span>
-                        <p>Dashboards, archives, pipelines, validation, and operational systems.</p>
                     </div>
                     <div class="hero-map-stamp" aria-hidden="true">
                         <span>No. 01 / Tampa, FL</span>
@@ -139,7 +161,6 @@
             <section class="section section-featured" id="projects">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Projects</p>
-                    <h2 data-pretext data-pretext-style="heading">Software, AI, automation, and data projects.</h2>
                 </div>
 
                 <div class="featured-grid">
@@ -453,7 +474,6 @@
             <section class="section journal-section" id="leadership">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Leadership</p>
-                    <h2 data-pretext data-pretext-style="heading">Teaching, organizing, and building with teams.</h2>
                 </div>
 
                 <div class="journal-list" data-reveal>

@@ -245,6 +245,85 @@ img {
     font-size: 0.8rem;
 }
 
+.platform-strip-rotating {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    perspective: 900px;
+}
+
+.platform-card-icon-only {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 64px;
+    align-items: center;
+    justify-items: center;
+    gap: 7px;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.platform-card-icon-only .platform-label {
+    max-width: 100%;
+    font-size: 0.68rem;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.platform-card-icon-only .platform-logo,
+.platform-card-icon-only .platform-initial {
+    animation: icon-tilt-spin 4.8s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+    transform-style: preserve-3d;
+}
+
+.platform-card-icon-only:nth-child(2) .platform-logo,
+.platform-card-icon-only:nth-child(2) .platform-initial {
+    animation-delay: -0.8s;
+}
+
+.platform-card-icon-only:nth-child(3) .platform-logo,
+.platform-card-icon-only:nth-child(3) .platform-initial {
+    animation-delay: -1.6s;
+}
+
+.platform-card-icon-only:nth-child(4) .platform-logo,
+.platform-card-icon-only:nth-child(4) .platform-initial {
+    animation-delay: -2.4s;
+}
+
+.platform-card-icon-only:nth-child(5) .platform-logo,
+.platform-card-icon-only:nth-child(5) .platform-initial {
+    animation-delay: -3.2s;
+}
+
+.platform-card-icon-only:nth-child(6) .platform-logo,
+.platform-card-icon-only:nth-child(6) .platform-initial {
+    animation-delay: -4s;
+}
+
+.platform-card-icon-only:nth-child(7) .platform-logo,
+.platform-card-icon-only:nth-child(7) .platform-initial {
+    animation-delay: -4.8s;
+}
+
+.platform-card-icon-only:nth-child(8) .platform-logo,
+.platform-card-icon-only:nth-child(8) .platform-initial {
+    animation-delay: -5.6s;
+}
+
+.platform-card-icon-only:nth-child(9) .platform-logo,
+.platform-card-icon-only:nth-child(9) .platform-initial {
+    animation-delay: -6.4s;
+}
+
+.platform-card-icon-only:hover .platform-logo,
+.platform-card-icon-only:hover .platform-initial,
+.platform-card-icon-only:focus-within .platform-logo,
+.platform-card-icon-only:focus-within .platform-initial {
+    animation-play-state: paused;
+}
+
 .hero-board {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
@@ -388,120 +467,62 @@ img {
     border-radius: 50%;
     transform: rotate(-10deg);
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
-.icon-orbit {
+.concept-orbit {
     position: absolute;
-    inset: -12px -14px 0 -38px;
-    z-index: 3;
+    inset: 0;
+    z-index: 4;
     pointer-events: none;
 }
 
-.orbit-ring {
+.orbit-card {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    border: 1px solid rgba(20, 20, 20, 0.08);
-    border-radius: 50%;
-    transform-style: preserve-3d;
-    filter: drop-shadow(0 16px 28px rgba(20, 20, 20, 0.12));
+    width: min(190px, 42vw);
+    padding: 16px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.66);
+    border-radius: 24px;
+    background: rgba(255, 249, 239, 0.84);
+    box-shadow: 0 18px 48px rgba(20, 20, 20, 0.14);
+    backdrop-filter: blur(14px);
+    animation: orbit-card-float 6.6s ease-in-out infinite;
 }
 
-.orbit-ring-outer {
-    width: 410px;
-    height: 410px;
-    margin: -205px 0 0 -230px;
-    animation: orbit-spin 18s linear infinite;
-}
-
-.orbit-ring-inner {
-    width: 300px;
-    height: 300px;
-    margin: -150px 0 0 -175px;
-    animation: orbit-spin-reverse 13s linear infinite;
-}
-
-.icon-orbit:hover .orbit-ring {
-    animation-play-state: paused;
-}
-
-.orbit-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: grid;
-    place-items: center;
-    width: 54px;
-    height: 54px;
-    margin: -27px;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 18px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(247, 238, 223, 0.78));
-    box-shadow: 0 16px 40px rgba(20, 20, 20, 0.14);
-    color: var(--text);
+.orbit-card span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.7rem;
     font-weight: 700;
     line-height: 1;
-    backdrop-filter: blur(14px);
 }
 
-.orbit-icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-.orbit-icon-text {
+.orbit-card p {
+    color: var(--muted);
     font-size: 0.9rem;
-    letter-spacing: 0.02em;
+    line-height: 1.35;
 }
 
-.orbit-ring-outer .orbit-icon {
-    animation: orbit-keep-upright 18s linear infinite;
+.orbit-card-ai {
+    top: 8px;
+    right: -32px;
 }
 
-.orbit-ring-inner .orbit-icon {
-    animation: orbit-keep-upright-reverse 13s linear infinite;
+.orbit-card-data {
+    right: -24px;
+    bottom: 76px;
+    animation-delay: -2.2s;
 }
 
-.orbit-icon-databricks {
-    --orbit-angle: 14deg;
-    transform: rotate(14deg) translateX(205px) rotate(-14deg);
-}
-
-.orbit-icon-python {
-    --orbit-angle: 104deg;
-    transform: rotate(104deg) translateX(205px) rotate(-104deg);
-}
-
-.orbit-icon-azure {
-    --orbit-angle: 194deg;
-    transform: rotate(194deg) translateX(205px) rotate(-194deg);
-}
-
-.orbit-icon-sql {
-    --orbit-angle: 284deg;
-    transform: rotate(284deg) translateX(205px) rotate(-284deg);
-}
-
-.orbit-icon-ai {
-    --orbit-angle: 24deg;
-    transform: rotate(24deg) translateX(150px) rotate(-24deg);
-}
-
-.orbit-icon-powerbi {
-    --orbit-angle: 154deg;
-    transform: rotate(154deg) translateX(150px) rotate(-154deg);
-}
-
-.orbit-icon-cpp {
-    --orbit-angle: 274deg;
-    transform: rotate(274deg) translateX(150px) rotate(-274deg);
+.orbit-card-software {
+    left: -36px;
+    top: 8px;
+    animation-delay: -4.4s;
 }
 
 .portrait-card {
     position: absolute;
+    z-index: 3;
     inset: 36px 46px 36px 0;
     display: flex;
     flex-direction: column;
@@ -539,42 +560,6 @@ img {
     padding: 24px;
     color: #fff;
     font-size: 0.92rem;
-}
-
-.floating-note {
-    position: absolute;
-    max-width: 220px;
-    padding: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 24px;
-    background: rgba(255, 249, 239, 0.82);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
-    animation: drift 6s ease-in-out infinite;
-    transition: transform 0.18s ease-out;
-}
-
-.floating-note span {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 1.9rem;
-    font-weight: 700;
-}
-
-.floating-note p {
-    color: var(--muted);
-    line-height: 1.45;
-}
-
-.floating-note-top {
-    top: 0;
-    right: 0;
-}
-
-.floating-note-bottom {
-    right: 24px;
-    bottom: 0;
-    animation-delay: 1.5s;
 }
 
 .hero-map-stamp {
@@ -1740,49 +1725,26 @@ img {
     font-size: 0.94rem;
 }
 
-@keyframes drift {
+@keyframes icon-tilt-spin {
     0%,
     100% {
-        transform: translateY(0);
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    42% {
+        transform: rotateY(180deg) rotateX(12deg);
+    }
+    58% {
+        transform: rotateY(180deg) rotateX(12deg);
+    }
+}
+
+@keyframes orbit-card-float {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(-1deg);
     }
     50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes orbit-spin {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 360deg;
-    }
-}
-
-@keyframes orbit-spin-reverse {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: -360deg;
-    }
-}
-
-@keyframes orbit-keep-upright {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: -360deg;
-    }
-}
-
-@keyframes orbit-keep-upright-reverse {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 360deg;
+        transform: translate3d(0, -10px, 18px) rotate(1deg);
     }
 }
 
@@ -1848,6 +1810,10 @@ img {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .platform-strip-rotating {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .hero-board {
         grid-template-columns: 1fr;
     }
@@ -1872,50 +1838,30 @@ img {
         transform: translate(-50%, -50%) rotate(-10deg);
     }
 
-    .icon-orbit {
-        inset: 0;
-    }
-
-    .orbit-ring-outer {
-        width: 360px;
-        height: 360px;
-        margin: -180px 0 0 -180px;
-    }
-
-    .orbit-ring-inner {
-        width: 250px;
-        height: 250px;
-        margin: -125px 0 0 -125px;
-    }
-
-    .orbit-icon-databricks,
-    .orbit-icon-python,
-    .orbit-icon-azure,
-    .orbit-icon-sql {
-        transform: rotate(var(--orbit-angle)) translateX(180px) rotate(calc(-1 * var(--orbit-angle)));
-    }
-
-    .orbit-icon-ai,
-    .orbit-icon-powerbi,
-    .orbit-icon-cpp {
-        transform: rotate(var(--orbit-angle)) translateX(125px) rotate(calc(-1 * var(--orbit-angle)));
-    }
-
     .portrait-card {
         inset: 48px 0 28px;
+    }
+
+    .orbit-card {
+        width: min(174px, 38vw);
+        padding: 14px;
+    }
+
+    .orbit-card-ai {
+        right: -10px;
+    }
+
+    .orbit-card-data {
+        right: -8px;
+    }
+
+    .orbit-card-software {
+        left: -10px;
     }
 
     .proof-atlas article + article {
         border-left: 0;
         border-top: 1px solid rgba(20, 20, 20, 0.12);
-    }
-
-    .floating-note-top {
-        right: 20px;
-    }
-
-    .floating-note-bottom {
-        right: 12px;
     }
 
     .experience-card {
@@ -1976,6 +1922,10 @@ img {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .platform-strip-rotating {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .platform-card {
         gap: 10px;
         padding: 12px;
@@ -1987,6 +1937,10 @@ img {
 
     .platform-strip-compact .platform-label {
         font-size: 0.84rem;
+    }
+
+    .platform-card-icon-only .platform-label {
+        font-size: 0.62rem;
     }
 
     .platform-strip-compact .platform-copy {
@@ -2004,57 +1958,38 @@ img {
         height: 300px;
     }
 
-    .icon-orbit {
-        inset: 8px 0 0;
-    }
-
-    .orbit-ring {
-        border-color: rgba(20, 20, 20, 0.06);
-    }
-
-    .orbit-ring-outer {
-        width: 310px;
-        height: 310px;
-        margin: -155px 0 0 -155px;
-    }
-
-    .orbit-ring-inner {
-        width: 218px;
-        height: 218px;
-        margin: -109px 0 0 -109px;
-    }
-
-    .orbit-icon {
-        width: 44px;
-        height: 44px;
-        margin: -22px;
-        border-radius: 15px;
-    }
-
-    .orbit-icon img {
-        width: 23px;
-        height: 23px;
-    }
-
-    .orbit-icon-text {
-        font-size: 0.78rem;
-    }
-
-    .orbit-icon-databricks,
-    .orbit-icon-python,
-    .orbit-icon-azure,
-    .orbit-icon-sql {
-        transform: rotate(var(--orbit-angle)) translateX(155px) rotate(calc(-1 * var(--orbit-angle)));
-    }
-
-    .orbit-icon-ai,
-    .orbit-icon-powerbi,
-    .orbit-icon-cpp {
-        transform: rotate(var(--orbit-angle)) translateX(109px) rotate(calc(-1 * var(--orbit-angle)));
-    }
-
     .portrait-card {
         inset: 34px 0 24px;
+    }
+
+    .orbit-card {
+        width: 146px;
+        padding: 12px;
+        border-radius: 19px;
+    }
+
+    .orbit-card span {
+        font-size: 1.14rem;
+    }
+
+    .orbit-card p {
+        font-size: 0.72rem;
+        line-height: 1.25;
+    }
+
+    .orbit-card-ai {
+        top: 4px;
+        right: 0;
+    }
+
+    .orbit-card-data {
+        right: 0;
+        bottom: 42px;
+    }
+
+    .orbit-card-software {
+        left: 0;
+        top: 45%;
     }
 
     .hero-map-stamp {
@@ -2081,11 +2016,6 @@ img {
 
     .portrait-meta {
         flex-direction: column;
-    }
-
-    .floating-note {
-        max-width: 180px;
-        padding: 14px;
     }
 
     .hero-tags span,
@@ -2138,8 +2068,9 @@ img {
         opacity: 1;
     }
 
-    .orbit-ring,
-    .orbit-icon {
+    .platform-card-icon-only .platform-logo,
+    .platform-card-icon-only .platform-initial,
+    .orbit-card {
         animation: none;
     }
 }
