@@ -625,6 +625,48 @@ img {
     line-height: 1.55;
 }
 
+.impact-band {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1px;
+    margin: 16px 0 72px;
+    background: rgba(20, 20, 20, 0.12);
+    border: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.impact-band article {
+    padding: 18px 16px 20px;
+    background: #fbf6ec;
+}
+
+.impact-figure {
+    display: block;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+    line-height: 0.98;
+    color: var(--text);
+}
+
+.impact-band p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+    .impact-band {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .impact-band {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 .metrics-strip,
 .contact-panel {
     display: grid;
@@ -1625,6 +1667,58 @@ img {
 
 .journal-item p {
     margin: 0;
+}
+
+.subsection-label {
+    margin: 40px 0 6px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.subsection-label:first-of-type {
+    margin-top: 0;
+}
+
+.awards-row {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 4px;
+    background: rgba(20, 20, 20, 0.12);
+    border: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.awards-row li {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    background: #fbf6ec;
+}
+
+.awards-row strong {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.15;
+}
+
+.awards-row span {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .awards-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .experience-section .section-heading h2,
